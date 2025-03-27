@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Praktikum</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #eee;
+        }
+        #welcomeScreen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        }
+        input {
+            margin: 10px 0;
+            padding: 8px;
+            width: 80%;
+        }
+        button {
+            background: black;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="welcomeScreen">
+        <div class="modal">
+            <h2>Selamat Datang!</h2>
+            <p>Masukkan Nama dan NIM Anda:</p>
+            <input type="text" id="nama" placeholder="Nama Lengkap">
+            <input type="text" id="nim" placeholder="NIM">
+            <button onclick="startWebsite()">Mulai</button>
+        </div>
+    </div>
+    
+    <h1>Web Praktikum</h1>
+    <p>Ini adalah website sederhana dengan efek tampilan pertama.</p>
+    <div id="userData" style="display:none;">
+        <h2 id="userName"></h2>
+        <p id="userNIM"></p>
+        <p>Universitas Jember</p>
+    </div>
+    
+    <script>
+        function startWebsite() {
+            let nama = document.getElementById("nama").value;
+            let nim = document.getElementById("nim").value;
+            if (nama.trim() === "" || nim.trim() === "") {
+                alert("Nama dan NIM tidak boleh kosong!");
+                return;
+            }
+            document.getElementById("welcomeScreen").style.display = "none";
+            document.getElementById("userData").style.display = "block";
+            document.getElementById("userName").innerText = nama;
+            document.getElementById("userNIM").innerText = "NIM: " + nim;
+        }
+    </script>
+</body>
+</html>
+
