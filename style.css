@@ -1,0 +1,255 @@
+/* Reset & Base */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f8f8f8;
+    color: #222;
+}
+
+/* Header & Navigation */
+header {
+    background-color: #2d3142;
+    color: white;
+    padding: 10px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+nav {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    position: relative;
+}
+
+.logo {
+    font-size: 1.7rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 14px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background: #4f5d75;
+}
+
+/* Hamburger menu */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 10px 60px 10px;
+    background: #f8f8f8;
+    border-radius: 20px;
+    margin: 40px auto 0 auto;
+    max-width: 900px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+}
+
+.hero-img {
+    width: 100%;
+    max-width: 500px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin-bottom: 28px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.09);
+}
+
+.hero-content {
+    text-align: center;
+}
+
+.main-btn {
+    background: #ef8354;
+    color: white;
+    border: none;
+    padding: 14px 34px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    transition: background 0.2s, transform 0.2s;
+    margin-top: 20px;
+}
+
+.main-btn:hover {
+    background: #d76a29;
+    transform: translateY(-2px) scale(1.05);
+}
+
+/* About Section */
+.about-section {
+    max-width: 900px;
+    margin: 40px auto;
+    background: white;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 32px 24px;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+}
+
+.about-img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.09);
+}
+
+.about-section h1 {
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+/* Services Section */
+.services-section {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.services-section h1 {
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.services-cards {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    background: white;
+    padding: 32px 24px;
+    border-radius: 14px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+    text-align: center;
+    width: 260px;
+    transition: transform 0.18s, box-shadow 0.18s;
+}
+
+.service-card:hover {
+    transform: translateY(-7px) scale(1.04);
+    box-shadow: 0 8px 32px rgba(239,131,84,0.14);
+}
+
+.service-icon {
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+    display: block;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 16px 0;
+    margin-top: 50px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+/* Menu Gallery (Explore Menu) */
+.menu-images {
+    margin-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+}
+
+.menu-images img {
+    width: 180px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.09);
+    transition: transform 0.2s;
+}
+
+.menu-images img:hover {
+    transform: scale(1.07) rotate(-2deg);
+}
+
+/* Responsive */
+@media screen and (max-width: 900px) {
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 24px;
+    }
+    .about-img {
+        width: 90%;
+        max-width: 350px;
+        height: 180px;
+    }
+    .services-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .hero-img {
+        height: 180px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background: #2d3142;
+        position: absolute;
+        top: 50px;
+        right: 30px;
+        width: 170px;
+        z-index: 99;
+        border-radius: 8px;
+        box-shadow: 0 4px 18px rgba(0,0,0,0.13);
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
